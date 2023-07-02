@@ -12,3 +12,19 @@ var removeElement = function(nums, val) {
     })
     return j //2 pointer O(n)
 };
+
+// remove duplicates from sorted array --> same soln
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function(nums) {
+    let count = 0;
+    for(let i = 0; i<nums.length; i++){
+        if(nums[i] !== nums[i+1]){
+            nums[count++] = nums[i]
+        }
+    }
+    return count
+};
